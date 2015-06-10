@@ -1,0 +1,30 @@
+<h1>Player chose <%=session[:choice] %>, computer chose <%=comp_choice%>.<%=outcome%> </h1>
+
+<h2><%= end_game %></h2>
+
+<table>
+  <thead>
+    <tr>
+      <th> Player </th>
+      <th> Score </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Human:</td>
+      <td><%= session[:player_wins] %></td>
+    </tr>
+    <tr>
+      <td>Computer:</td>
+      <td><%= session[:computer_wins] %></td>
+    </tr>
+  </tbody>
+</table>
+<form>
+  <form action="/" method="post">
+    <h2>Pick one!</h2>
+    <input type="submit" name ="choice" value="rock">
+    <input type="submit" name ="choice" value="scissors">
+    <input type="submit" name ="choice" value="paper">
+
+</form>
